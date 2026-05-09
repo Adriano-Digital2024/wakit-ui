@@ -424,3 +424,27 @@ input[type="range"]::-moz-range-track {
 .json-null {
   color: var(--muted-foreground);
 }
+/* Hover nos menus - preto transparente leve */
+.hover\:bg-muted:hover,
+[class*="hover"]:hover,
+.group:hover,
+button:hover:not(.primary),
+a:hover:not(.primary) {
+  background-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Item ativo/selecionado - preto transparente um pouco mais escuro */
+.active,
+.selected,
+[aria-current="page"],
+[data-selected="true"] {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Mantém o texto branco/visível */
+.hover\:bg-muted:hover *,
+.active *,
+.selected *,
+[aria-current="page"] * {
+  color: #ffffff !important;
+}
