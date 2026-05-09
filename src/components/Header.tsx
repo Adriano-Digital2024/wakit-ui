@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <div className="header flex justify-between w-full">
       <div className="flex items-center truncate">
-        <img src="/logo.png" alt="FlowAction" className="h-18 w-auto" />
+        <img src="/logo.png" alt="FlowAction" className="h-10 w-auto" />
       </div>
       <div className="flex justify-end">
         <LinkButton
