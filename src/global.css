@@ -424,3 +424,14 @@ input[type="range"]::-moz-range-track {
 .json-null {
   color: var(--muted-foreground);
 }
+/* Ajuste simples de contraste */
+.dark *:hover,
+.dark .active,
+.dark .selected {
+  color: #000000 !important;
+}
+
+.dark button.primary,
+.dark .bg-primary {
+  color: #000000 !important;
+}
