@@ -11,8 +11,8 @@ export default function Header() {
   return (
     <div className="header flex justify-between w-full">
       <div className="flex items-center truncate">
-        <div className="text-primary tracking-tighter font-bold text-[24px]">
-          {org?.name || "logo.png"}
+        <div className="flex items-center">
+          <img src="/logo.png" alt="FlowAction" className="h-8 w-auto" />
         </div>
       </div>
       <div className="flex justify-end">
