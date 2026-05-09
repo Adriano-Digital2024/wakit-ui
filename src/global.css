@@ -424,3 +424,46 @@ input[type="range"]::-moz-range-track {
 .json-null {
   color: var(--muted-foreground);
 }
+/* Corrige contraste nos itens selecionados/hover */
+[data-selected="true"],
+[aria-current="page"],
+.active,
+.selected,
+.group:hover .group-hover\:text-primary,
+button.primary,
+.sidebar-item.active,
+.sidebar-item:hover {
+  color: #000000 !important;
+}
+
+/* Sidebar itens selecionados com fundo dourado */
+.sidebar-item[data-selected="true"],
+.sidebar-item.active,
+a[href].active {
+  background-color: oklch(0.80 0.13 85.0) !important;
+  color: #000000 !important;
+}
+
+/* Hover nos itens do sidebar (fundo dourado suave, texto preto) */
+.sidebar-item:hover {
+  background-color: oklch(0.80 0.13 85.0 / 0.8) !important;
+  color: #000000 !important;
+}
+
+/* Links com hover */
+a:hover {
+  color: oklch(0.80 0.13 85.0) !important;
+}
+
+/* Menu items específicos */
+[role="menuitem"]:hover,
+[role="menuitem"]:focus {
+  background-color: oklch(0.80 0.13 85.0) !important;
+  color: #000000 !important;
+}
+
+/* Tabs selecionadas */
+[data-state="active"] {
+  color: oklch(0.80 0.13 85.0) !important;
+  border-bottom-color: oklch(0.80 0.13 85.0) !important;
+}
