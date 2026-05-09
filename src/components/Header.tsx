@@ -11,7 +11,9 @@ export default function Header() {
   return (
     <div className="header flex justify-between w-full">
       <div className="flex items-center truncate">
-        <img src="/logo.png" alt="FlowAction" className="h-8 w-auto" />
+        <div className="text-primary tracking-tighter font-bold text-[24px]">
+          FlowAction
+        </div>
       </div>
       <div className="flex justify-end">
         <LinkButton
