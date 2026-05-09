@@ -33,35 +33,35 @@
 }
 
 .dark {
-  --background: oklch(0.27 0 106.64);
-  --foreground: oklch(0.81 0.01 93.01);
-  --card: oklch(0.27 0 106.64);
-  --card-foreground: oklch(0.98 0.01 95.1);
-  --popover: oklch(0.31 0 106.6);
-  --popover-foreground: oklch(0.92 0 106.48);
-  --primary: oklch(0.75 0.12 85.0);  /* Dourado */
-  --primary-foreground: oklch(0.15 0 0); /* Preto para contraste */
-  --secondary: oklch(0.98 0.01 95.1);
-  --secondary-foreground: oklch(0.31 0 106.6);
-  --muted: oklch(0.22 0 106.71);
-  --muted-foreground: oklch(0.77 0.02 99.07);
-  --accent: oklch(0.21 0.01 95.42);
-  --accent-foreground: oklch(0.97 0.01 98.88);
-  --destructive: oklch(0.64 0.21 25.33);
-  --border: oklch(0.36 0.01 106.89);
-  --input: oklch(0.43 0.01 100.22);
-  --ring: oklch(0.59 0.17 253.06);
-  --sidebar: oklch(0.24 0.00 67.71); 
-  --sidebar-foreground: oklch(0.81 0.01 93.01);
-  --sidebar-primary: oklch(0.75 0.12 85.0); /* Dourado */
-  --sidebar-primary-foreground: oklch(0.15 0 0);
-  --sidebar-accent: oklch(0.17 0 106.62);
-  --sidebar-accent-foreground: oklch(0.81 0.01 93.01);
-  --sidebar-border: oklch(0.94 0 0);
-  --sidebar-ring: oklch(0.77 0 0);
+  --background: oklch(0.08 0 0);        /* Preto puro suave */
+  --foreground: oklch(0.95 0.02 85.0);  /* Branco quente */
+  --card: oklch(0.12 0.01 85.0);        /* Cinza escuro para cards */
+  --card-foreground: oklch(0.95 0.02 85.0);
+  --popover: oklch(0.10 0 0);
+  --popover-foreground: oklch(0.95 0.02 85.0);
+  --primary: oklch(0.80 0.13 85.0);     /* Dourado vibrante */
+  --primary-foreground: oklch(0.08 0 0); /* Preto para contraste */
+  --secondary: oklch(0.15 0 0);
+  --secondary-foreground: oklch(0.90 0.02 85.0);
+  --muted: oklch(0.13 0.01 85.0);
+  --muted-foreground: oklch(0.70 0.02 85.0);
+  --accent: oklch(0.80 0.13 85.0);      /* Dourado para destaques */
+  --accent-foreground: oklch(0.08 0 0);
+  --destructive: oklch(0.65 0.20 25.0);
+  --border: oklch(0.20 0.02 85.0);
+  --input: oklch(0.18 0.01 85.0);
+  --ring: oklch(0.80 0.13 85.0);        /* Dourado no foco */
+  --sidebar: oklch(0.06 0 0);
+  --sidebar-foreground: oklch(0.90 0.02 85.0);
+  --sidebar-primary: oklch(0.80 0.13 85.0);
+  --sidebar-primary-foreground: oklch(0.08 0 0);
+  --sidebar-accent: oklch(0.12 0.01 85.0);
+  --sidebar-accent-foreground: oklch(0.90 0.02 85.0);
+  --sidebar-border: oklch(0.15 0 0);
+  --sidebar-ring: oklch(0.80 0.13 85.0);
 
-  --chat-out: oklch(43.696% 0.08141 40.805);
-  --chat-in: oklch(0.31 0 106.6);
+  --chat-out: oklch(0.20 0.04 85.0);    /* Bolha de saída dourada escura */
+  --chat-in: oklch(0.12 0.01 85.0);     /* Bolha de entrada escura */
 }
 
 @theme inline {
