@@ -45,9 +45,7 @@ function Login() {
 
   return (
     <div className="flex flex-col gap-9 justify-center items-center bg-background text-foreground h-dvh w-screen">
-      <div className="text-primary tracking-tighter font-bold text-[36px]">
-        FlowAction
-      </div>
+      <img src="/logo.png" alt="FlowAction" className="h-20 w-auto mb-4" />
 
       <div className="flex flex-col gap-3 w-[250px]">
         <button
