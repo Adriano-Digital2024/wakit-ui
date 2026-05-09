@@ -1,229 +1,450 @@
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    /* Premium Dark Mode Design System - CopyMonster */
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-
-    --card: 240 10% 7%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 240 10% 7%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 51 98% 33%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 51 98% 43%;
-
-    --secondary: 240 5% 26%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 240 5% 16%;
-    --muted-foreground: 240 5% 64.9%;
-
-    --accent: 51 98% 33%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-
-    /* ⚠️ LOCKED VALUES — DO NOT MODIFY ⚠️
-       Border and input colors are calibrated for CopyMonster's dark/light themes.
-       Dark mode: 10% lightness (subtle on 3.9% background)
-       Light mode: 85% lightness (subtle on 100% background)
-       Changing these causes visible "white border" regression. */
-    --border: 240 10% 10%;
-    --input: 240 10% 10%;
-    --ring: 51 98% 33%;
-
-    --radius: 0.75rem;
-
-    /* Agent Colors */
-    --agent-positioner: 51 98% 33%;
-    --agent-vsl: 0 84% 60%;
-    --agent-sales: 142 71% 45%;
-    --agent-launch: 199 89% 48%;
-    --agent-email: 24 95% 53%;
-    --agent-ads: 271 80% 60%;
-    --agent-headline: 43 96% 56%;
-
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(51 98% 33% / 0.2), hsl(199 89% 48% / 0.2));
-    --gradient-card: linear-gradient(135deg, hsl(240 10% 10%), hsl(240 10% 7%));
-    --gradient-primary: linear-gradient(135deg, hsl(51 98% 33%), hsl(51 98% 28%));
-    
-    /* Shadows */
-    --shadow-glow: 0 0 40px hsl(51 98% 33% / 0.3);
-    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
-    
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .light {
-    /* Premium Light Mode Design System - CopyMonster */
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-
-    --primary: 51 98% 33%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 51 98% 43%;
-
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-
-    --accent: 51 98% 33%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-
-    /* ⚠️ LOCKED — see :root comment */
-    --border: 240 5.9% 85%;
-    --input: 240 5.9% 85%;
-    --ring: 51 98% 33%;
-
-    /* Gradients for Light Mode */
-    --gradient-hero: linear-gradient(135deg, hsl(51 98% 33% / 0.1), hsl(199 89% 48% / 0.1));
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 98%), hsl(0 0% 100%));
-    --gradient-primary: linear-gradient(135deg, hsl(51 98% 33%), hsl(51 98% 28%));
-    
-    /* Shadows for Light Mode */
-    --shadow-glow: 0 0 40px hsl(51 98% 33% / 0.2);
-    --shadow-card: 0 10px 30px -10px hsl(240 10% 3.9% / 0.1);
-  }
-
-  .dark {
-    /* Already dark by default */
-  }
+:root {
+  --background: oklch(0.98 0.01 95.1);
+  --foreground: oklch(0.34 0.03 95.72);
+  --card: oklch(0.98 0.01 95.1);
+  --card-foreground: oklch(0.19 0 106.59);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.27 0.02 98.94);
+  --primary: oklch(0.75 0.12 85.0);  /* Dourado */
+  --primary-foreground: oklch(0.15 0 0); /* Preto para contraste */
+  --secondary: oklch(0.92 0.01 92.99);
+  --secondary-foreground: oklch(0.43 0.02 98.6);
+  --muted: oklch(0.93 0.02 90.24);
+  --muted-foreground: oklch(0.61 0.01 97.42);
+  --accent: oklch(0.92 0.01 92.99);
+  --accent-foreground: oklch(0.27 0.02 98.94);
+  --destructive: oklch(0.19 0 106.59);
+  --border: oklch(0.88 0.01 97.36);
+  --input: oklch(0.76 0.02 98.35);
+  --ring: oklch(0.59 0.17 253.06);
+  --sidebar: oklch(0.97 0.01 98.88);
+  --sidebar-foreground: oklch(0.36 0.01 106.65);
+  --sidebar-primary: oklch(0.75 0.12 85.0); /* Dourado */
+  --sidebar-primary-foreground: oklch(0.15 0 0);
+  --sidebar-accent: oklch(0.92 0.01 92.99);
+  --sidebar-accent-foreground: oklch(0.33 0 0);
+  --sidebar-border: oklch(0.94 0 0);
+  --sidebar-ring: oklch(0.77 0 0);
+  
+  --chat-out: oklch(91.619% 0.0445 38.665);
+  --chat-in: oklch(1 0 0);
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
+.dark {
+  --background: oklch(0.08 0 0);        /* Preto puro suave */
+  --foreground: oklch(0.95 0.02 85.0);  /* Branco quente */
+  --card: oklch(0.12 0.01 85.0);        /* Cinza escuro para cards */
+  --card-foreground: oklch(0.95 0.02 85.0);
+  --popover: oklch(0.10 0 0);
+  --popover-foreground: oklch(0.95 0.02 85.0);
+  --primary: oklch(0.80 0.13 85.0);     /* Dourado vibrante */
+  --primary-foreground: oklch(0.08 0 0); /* Preto para contraste */
+  --secondary: oklch(0.15 0 0);
+  --secondary-foreground: oklch(0.90 0.02 85.0);
+  --muted: oklch(0.13 0.01 85.0);
+  --muted-foreground: oklch(0.70 0.02 85.0);
+  --accent: oklch(0.80 0.13 85.0);      /* Dourado para destaques */
+  --accent-foreground: oklch(0.08 0 0);
+  --destructive: oklch(0.65 0.20 25.0);
+  --border: oklch(0.20 0.02 85.0);
+  --input: oklch(0.18 0.01 85.0);
+  --ring: oklch(0.80 0.13 85.0);        /* Dourado no foco */
+  --sidebar: oklch(0.06 0 0);
+  --sidebar-foreground: oklch(0.90 0.02 85.0);
+  --sidebar-primary: oklch(0.80 0.13 85.0);
+  --sidebar-primary-foreground: oklch(0.08 0 0);
+  --sidebar-accent: oklch(0.12 0.01 85.0);
+  --sidebar-accent-foreground: oklch(0.90 0.02 85.0);
+  --sidebar-border: oklch(0.15 0 0);
+  --sidebar-ring: oklch(0.80 0.13 85.0);
 
-  body {
-    @apply bg-background text-foreground antialiased;
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
+  --chat-out: oklch(0.20 0.04 85.0);    /* Bolha de saída dourada escura */
+  --chat-in: oklch(0.12 0.01 85.0);     /* Bolha de entrada escura */
+}
 
-  html {
-    scroll-behavior: smooth;
-  }
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-incoming-chat-bubble: var(--chat-in);
+  --color-outgoing-chat-bubble: var(--chat-out);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family:
+    Segoe UI,
+    Helvetica Neue,
+    Helvetica,
+    Lucida Grande,
+    Arial,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p a,
+.markdown a {
+  color: var(--primary) !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
 }
 
 @layer components {
-  .gradient-hero {
-    background: var(--gradient-hero);
+  .label {
+    @apply text-[12px] text-muted-foreground mb-[8px];
   }
 
-  .gradient-card {
-    background: var(--gradient-card);
+  form {
+    @apply flex flex-col gap-[24px] grow pl-[10px];
   }
 
-  .gradient-primary {
-    background: var(--gradient-primary);
+  /* Override form styles for login page */
+  .login-form {
+    @apply grow-0 gap-3 pl-0;
   }
 
-  .glow-effect {
-    box-shadow: var(--shadow-glow);
+  .section-body p {
+    @apply text-muted-foreground text-[14px] leading-relaxed;
   }
 
-  .card-shadow {
-    box-shadow: var(--shadow-card);
+  textarea {
+    field-sizing: content;
+    resize: none;
   }
 
-  .transition-smooth {
-    transition: var(--transition-smooth);
+  input.text {
+    @apply w-full border-b-[2px] border-transparent hover:border-input pb-[2px] focus-visible:outline-none text-[16px] text-foreground placeholder:text-muted-foreground bg-transparent focus-visible:border-primary;
   }
 
-  /* Phone Input Styling */
-  .phone-input {
-    display: flex;
+  input.text:disabled {
+    @apply hover:border-transparent focus-visible:border-transparent text-muted-foreground cursor-default;
+  }
+
+  input.text:read-only {
+    @apply hover:border-transparent focus-visible:border-transparent cursor-default;
+  }
+  
+  textarea.text {
+    @apply w-full focus-visible:outline-none text-[16px] text-foreground placeholder:text-muted-foreground bg-transparent focus-visible:border-primary;
+  }
+
+  .instructions {
+    @apply text-[14px] flex flex-col gap-[8px] leading-relaxed;
+  }
+
+  .instructions p {
+    @apply text-foreground;
+  }
+
+  .instructions ul {
+    @apply list-disc ml-[16px] space-y-[6px];
+  }
+
+  .instructions ol {
+    @apply list-decimal ml-[16px] space-y-[6px];
+  }
+
+  select {
+    @apply w-full pb-[2px] border-b-[2px] border-transparent hover:border-input focus-visible:outline-none text-[16px] text-foreground placeholder:text-muted-foreground bg-transparent focus-visible:border-primary;
+  }
+
+  button.primary {
+    @apply bg-primary hover:bg-primary/90 disabled:opacity-50 text-primary-foreground rounded-full text-[16px] py-[8px];
+  }
+
+  button.destructive {
+    @apply bg-transparent border border-destructive hover:bg-destructive/10 text-destructive rounded-full text-[16px] py-[8px];
+  }
+
+  .header {
+    @apply h-[60px] py-[10px] px-[20px] flex shrink-0;
+  }
+
+  .spin {
+    @apply animate-spin [transform-box:fill-box] [transform-origin:center] stroke-current fill-none;
+  }
+
+  .bg-chat {
+    background-color: var(--color-muted);
+    z-index: 0;
+  }
+
+  .bg-chat::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-image: url("/bg-chat-tile-dark.png");
+    background-repeat: repeat;
+    opacity: 0.06; /* Subtle pattern for light mode */
+    filter: invert(1); /* Invert to make dark pattern on light background if original is light-on-dark */
+    z-index: -1;
+    pointer-events: none;
   }
 
-  .phone-input .PhoneInputInput {
-    flex: 1;
-    height: 2.5rem;
-    width: 100%;
-    border-radius: calc(var(--radius) - 2px);
-    border: 1px solid hsl(var(--input));
-    background-color: hsl(var(--background));
-    padding: 0.5rem 0.75rem;
-    font-size: 0.875rem;
-    color: hsl(var(--foreground));
-    transition: var(--transition-smooth);
+  .dark .bg-chat::before {
+    opacity: 0.12;
+    filter: none; /* Keep original for dark mode */
   }
 
-  .phone-input .PhoneInputInput:focus {
-    outline: none;
-    border-color: hsl(var(--ring));
-    box-shadow: 0 0 0 1px hsl(var(--ring));
+  /* WhatsApp Web-like Grid Layout */
+  .app-grid {
+    display: grid;
+    /* Default (lg+): Menu | Left Panel | Chat */
+    grid-template-columns: 48px minmax(300px, 1fr) 2fr;
+    height: 100dvh;
+    width: 100vw;
+    overflow: hidden;
   }
 
-  .phone-input .PhoneInputCountry {
-    margin-right: 0.5rem;
+  @media (min-width: 1024px) {
+    .app-grid {
+      grid-template-columns: 64px minmax(300px, 1fr) 2fr;
+    }
   }
 
-  .phone-input .PhoneInputCountrySelect {
-    height: 2.5rem;
-    border-radius: calc(var(--radius) - 2px);
-    border: 1px solid hsl(var(--input));
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    padding: 0 0.5rem;
-  }
-
-  /* Chat Markdown Prose Overrides */
-  .chat-markdown p {
-    margin: 0.25em 0;
-  }
-  .chat-markdown h1, .chat-markdown h2, .chat-markdown h3, .chat-markdown h4 {
-    margin: 0.5em 0 0.25em;
-    font-size: 1em;
-    font-weight: 700;
-  }
-  .chat-markdown ul, .chat-markdown ol {
-    margin: 0.25em 0;
-    padding-left: 1.25em;
-  }
-  .chat-markdown li {
-    margin: 0.1em 0;
-  }
-  .chat-markdown strong {
-    color: inherit;
-  }
-
-  /* Custom Scrollbar */
-  .custom-scrollbar {
-    scrollbar-width: thin;
-    scrollbar-color: hsl(var(--border)) transparent;
-  }
-  .custom-scrollbar::-webkit-scrollbar {
-    width: 6px;
-  }
-  .custom-scrollbar::-webkit-scrollbar-track {
+  /* Resize Handle for panels */
+  .resize-handle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    cursor: col-resize;
     background: transparent;
+    transition: background-color 0.15s ease;
+    z-index: 10;
   }
-  .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: hsl(var(--border));
-    border-radius: 3px;
+
+  .resize-handle:hover,
+  .resize-handle:active {
+    background-color: var(--color-primary);
   }
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background-color: hsl(var(--muted-foreground));
+
+  /* Hide scrollbar but keep scroll functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
   }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* Responsive breakpoints */
+  
+  /* 
+   Tailwind CSS v4 default breakpoints:
+
+   - sm: 640px
+   - md: 768px
+   - lg: 1024px
+   - xl: 1280px
+   - 2xl: 1536px
+
+   Responsive Strategy:
+  
+   - xl+: 3 columns. Menu (64px) | Left Panel (max 400px) | Chat (1fr).
+   - xl-lg: 3 columns. Left Panel grows (35%).
+   - lg-md: 3 columns. Left Panel (min 300px).
+   - md-: Mobile, 2 views:
+     1. Menu (64px) | Left panel (1fr).
+     2. Chat (1fr).
+     
+     Content toggles between views based on active conversation.
+     Controlled by Tailwind classes in _auth.tsx (hidden/flex).
+  */
+}
+
+/* Hide number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background-color: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  box-sizing: content-box;
+  height: 12px;
+  width: 12px;
+  border: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  border: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  appearance: none;
+}
+
+input[type="range"]::-moz-range-track {
+  appearance: none;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ced0d1 transparent;
+}
+
+/* WebKit */
+*::-webkit-scrollbar {
+  width: 0.3rem;
+  height: 0.3rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ced0d1;
+  border-radius: 0.6rem;
+  border: none;
+}
+
+/* Text messages */
+.markdown p + p,
+.markdown p + ul,
+.markdown p + ol,
+.markdown ul + p,
+.markdown ul + ul,
+.markdown ul + ol,
+.markdown ol + p,
+.markdown ol + ul,
+.markdown ol + ol {
+  margin-top: 1rem;
+}
+
+.markdown li,
+.markdown li ul,
+.markdown li ol {
+  margin-left: 1.4rem; /* Adjust margin for nested lists */
+}
+
+.markdown ol li {
+  list-style-type: decimal;
+}
+
+.markdown ul li {
+  list-style-type: disc;
+}
+
+.templateField {
+  text-decoration: underline;
+  text-decoration-color: #53bdeb;
+  text-decoration-thickness: 2px;
+  background-color: #53bdeb2d;
+}
+
+.template-form {
+  input,
+  select,
+  textarea,
+  button {
+    padding: 6px 12px;
+    border-radius: 7.5px;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+}
+/* pretty-print-json theme mapping */
+.json-key {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.json-string {
+  color: var(--ring);
+}
+
+.json-number, 
+.json-boolean {
+  color: var(--primary);
+}
+
+.json-null {
+  color: var(--muted-foreground);
+}
+/* Hover nos menus - preto transparente leve */
+.hover\:bg-muted:hover,
+[class*="hover"]:hover,
+.group:hover,
+button:hover:not(.primary),
+a:hover:not(.primary) {
+  background-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Item ativo/selecionado - preto transparente um pouco mais escuro */
+.active,
+.selected,
+[aria-current="page"],
+[data-selected="true"] {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Mantém o texto branco/visível */
+.hover\:bg-muted:hover *,
+.active *,
+.selected *,
+[aria-current="page"] * {
+  color: #ffffff !important;
 }
