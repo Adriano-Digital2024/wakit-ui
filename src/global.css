@@ -488,3 +488,37 @@ div[role="textbox"],
 [class*="message"] div {
   color: #000000 !important;
 }
+/* CORREÇÃO DO ÍCONE DE ANEXO (CLIPE) */
+/* Deixa o ícone escuro/visível */
+
+button[aria-label="Anexar"],
+button[aria-label="Attach"],
+button[aria-label="anexar arquivo"],
+button[title="Anexar"],
+button[title="Attach"],
+.attach-button,
+.attachment-button,
+[class*="attach"] svg,
+[class*="attachment"] svg,
+button svg[class*="paperclip"],
+button svg[class*="attach"] {
+  color: #333333 !important;
+  fill: #333333 !important;
+  stroke: #333333 !important;
+}
+
+/* Se o ícone for um SVG, força a cor escura */
+button svg,
+.attach-icon svg,
+.attachment-icon svg {
+  color: #333333 !important;
+  fill: #333333 !important;
+  stroke: #333333 !important;
+}
+
+/* Hover do botão de anexo (opcional, muda de cor ao passar o mouse) */
+button[aria-label="Anexar"]:hover svg,
+.attach-button:hover svg {
+  color: #000000 !important;
+  fill: #000000 !important;
+}
