@@ -446,3 +446,11 @@ a:hover:not(.primary) {
 [aria-current="page"] * {
   color: #ffffff !important;
 }
+/* Apenas corrige o campo de digitação do chat */
+textarea[class*="message"],
+textarea[class*="chat"],
+input[class*="message"],
+input[class*="chat"] {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
