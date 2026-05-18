@@ -446,11 +446,45 @@ a:hover:not(.primary) {
 [aria-current="page"] * {
   color: #ffffff !important;
 }
-/* Apenas corrige o campo de digitação do chat */
-textarea[class*="message"],
-textarea[class*="chat"],
-input[class*="message"],
-input[class*="chat"] {
+/* CORREÇÃO CIRÚRGICA DO CHAT - TEXTO PRETO */
+/* Força o texto dentro da área de conversa a ser PRETO */
+
+/* Campo onde você digita a mensagem */
+.message-input textarea,
+.chat-input textarea,
+textarea.message-input,
+div[role="textbox"],
+[contenteditable="true"] {
   color: #000000 !important;
+  background-color: #f5f5f5 !important;
+  caret-color: #000000 !important;
+}
+
+/* Mensagens enviadas (balão verde/azul) */
+.outgoing-message,
+.message-outgoing,
+.sent-message,
+[class*="message"][class*="outgoing"] {
+  background-color: #dcf8c5 !important;
+  color: #000000 !important;
+}
+
+/* Mensagens recebidas (balão cinza/branco) */
+.incoming-message,
+.message-incoming,
+.received-message,
+[class*="message"][class*="incoming"] {
   background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #e0e0e0 !important;
+}
+
+/* Qualquer texto dentro de uma mensagem */
+.message-text,
+.message-content,
+.message-body,
+[class*="message"] p,
+[class*="message"] span,
+[class*="message"] div {
+  color: #000000 !important;
 }
